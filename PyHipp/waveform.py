@@ -15,35 +15,6 @@ class Waveform(DPT.DPObject):
 
     def create(self, *args, **kwargs):
         # this function will be called once to create this waveform object
-        
-        # one neat property of Object-Oriented Programming (OOP) structure is that 
-        # you can create some field-value pairs that can be called and updated 
-        # in all functions of the object, if you specify the function properly.
-        # The only thing that you need to do is to instantiate those fields in
-        # this function with the prefix 'self.', then you can call them and 
-        # edit them in all the other functions that have the first input argument
-        # being 'self'
-        #
-        # For exmample, if you instantiate a field-value pair:
-        # self.name = IronMan
-        #
-        # You can then call them or edit them in other functions:
-        # def get_name(self):
-        #    print(self.name)
-        #
-        # def set_name(self, new_name):
-        #    self.name = new_name
-        #
-        # In this way, you don't need to return and pass in so many arguments 
-        # across different functions anymore :)
-        
-        
-        # The following is some hints of the things-to-do:
-        
-        # read the mountainsort template files
-        # .........................................
-        # ..................code...................
-        # .........................................
         # 'channelxxx, xxx is the number of the channel'
 
         pwd = os.path.normpath(os.getcwd());
@@ -53,8 +24,8 @@ class Waveform(DPT.DPObject):
         self.array_dict[aname] = 0
         self.numSets = 1
         self.current_plot_type = None
-        
         self.channel_filename = [os.path.basename(pwd)]  
+        
         template_filename = os.path.join(
             DPT.levels.resolve_level('day', self.channel_filename[0]),
             'mountains', self.channel_filename[0], 'output', 'templates.hkl')
@@ -64,7 +35,7 @@ class Waveform(DPT.DPObject):
         
         # check on the mountainsort template data and create a DPT object accordingly
         # Example:
-        if self.data:
+        if self.data != []:
             # create object if data is not empty
             DPT.DPObject.create(self, *args, **kwargs)
         else:
