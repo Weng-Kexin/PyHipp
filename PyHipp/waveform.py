@@ -47,6 +47,7 @@ class Waveform(DPT.DPObject):
         # 'channelxxx, xxx is the number of the channel'
 
         pwd = os.path.normpath(os.getcwd());
+        '''
         aname = DPT.levels.normpath(os.path.dirname(pwd))
         
         self.array_dict = dict()
@@ -54,6 +55,9 @@ class Waveform(DPT.DPObject):
         self.numSets = 1
         self.current_plot_type = None
                 
+        '''
+        
+        
         self.channel_filename = [os.path.basename(pwd)]  
         template_filename = os.path.join(
             DPT.levels.resolve_level('day', self.channel_filename[0]),
