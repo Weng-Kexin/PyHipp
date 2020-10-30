@@ -80,8 +80,6 @@ class Waveform(DPT.DPObject):
         for ar in wf.array_dict:
             self.array_dict[ar] = self.numSets
         self.numSets += 1
-
-        
         
     def plot(self, i = None, ax = None, getNumEvents = False, getLevels = False,\
              getPlotOpts = False, overlay = False, **kwargs):
