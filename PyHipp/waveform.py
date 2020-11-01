@@ -158,10 +158,8 @@ class Waveform(DPT.DPObject):
             ax.set_yticklabels([])
 
     def remove_subplots(self, fig):
-        # Remove any super titles
-        fig.suptitle(None)
         for x in fig.get_axes():  # remove all axes in current figure
-            x.remove()    
+            x.remove() 
 
     #%% helper functions        
     # Please make use of the properties of the OOP to call and edit the field-value
