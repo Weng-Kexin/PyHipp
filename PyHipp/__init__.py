@@ -19,3 +19,4 @@ from .raycast import raycast
 from .freqspectrum import FreqSpectrum
 from .vmpc import VMPlaceCell
 from .waveform import Waveform
+from .vmplacecell import VMPlaceCell
